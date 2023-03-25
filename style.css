@@ -104,3 +104,11 @@ header .container{
     background-color: var(--hoverColor);
     transform: scale(1) !important;
 }
+
+.showcase-area .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+
+}
