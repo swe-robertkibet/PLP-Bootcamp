@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
 
 :root{
-    --mainColor: #64bcf4;
-    --hoverColor: #5bacdf;
+    --mainColor: rgb(172, 27, 27);
+    --hoverColor: rgb(202, 76, 76);
     --backgroundColor: #f1f8fc;
     --darkOne: #312f3a;
     --darkTwo: #45424b;
@@ -36,11 +36,14 @@ a{
     min-height: 100vh;
     overflow: hidden;
     background-color: var(--backgroundColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container{
     position: relative;
-    max-width: 81rem;
+    max-width: 110rem;
     width: 100%;
     margin: 0 auto;
     padding: 0 3rem;
@@ -107,8 +110,31 @@ header .container{
 
 .showcase-area .container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
+}
 
+.big-title{
+    font-size: 1.4rem;
+    color: var(--darkOne);
+    text-transform: capitalize;
+    line-height: 1.4;
+}
+
+.text{
+    color: var(--lightOne);
+    font-size: 1.1rem;
+    margin: 1.9rem 0 2.5rem;
+    max-width: 880px;
+    line-height: 2.3;
+}
+
+.showcase-area .btn{
+    box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.05);
+}
+
+.computer{
+    width: 80%;
+    transform: translate(45%, 25px);
 }
