@@ -209,3 +209,10 @@ header .container{
     opacity: 0.1;
     transform: rotate(90deg) scale(1.5)
 }
+
+.copy{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}

@@ -17,6 +17,8 @@ function toggleAnimation() {
         clone.classList.remove("dark");
         clone.classList.add("light");
     }
+    
+    clone.classList.add("copy");
     main.appendChild(clone);
 
 }
