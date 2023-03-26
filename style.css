@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
 
-:root{
+.light {
     --mainColor: rgb(172, 27, 27);
     --hoverColor: rgb(202, 76, 76);
     --backgroundColor: #f1f8fc;
@@ -8,6 +8,16 @@
     --darkTwo: #45424b;
     --lightOne: #919191;
     --lightTwo: #aaa;
+}
+
+.dark{
+    --mainColor: rgb(172, 27, 27);
+    --hoverColor: rgb(202, 76, 76);
+    --backgroundColor: #1e1e1e;
+    --darkOne: #f3f3f3;
+    --darkTwo: #fff;
+    --lightOne: #ccc;
+    --lightTwo: #e7e3e3;   
 }
 
 *,
@@ -158,13 +168,27 @@ header .container{
     line-height: 39px;
 }
 
-.toggle-btn i:last-child{
-    display: none;
-}
-
 .toggle-btn:hover{
     background-color: var(--mainColor);
 }
+
+.big-wrapper.light .toggle-btn i:last-child{
+    display: none;
+}
+
+.big-wrapper.light .toggle-btn i:first-child{
+    display: block;
+}
+
+.big-wrapper.dark .toggle-btn i:last-child{
+    display: block;
+}
+
+.big-wrapper.dark .toggle-btn i:first-child{
+    display: none;
+}
+
+
 
 .shape{
     position: absolute;
