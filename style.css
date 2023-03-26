@@ -215,4 +215,14 @@ header .container{
     top: 0;
     left: 0;
     z-index: 100;
+    animation: appear 0.8s 1 both;
+}
+
+@keyframes appear{
+    0%{
+        clip-path: circle(30% at 0% 100% );
+    }
+    100%{
+        clip-path: circle(150% at 0 100%);
+    }
 }
