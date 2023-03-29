@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="build.css">
+</head>
+<body>
+    <main>
+        <div class="big-wrapper light">
+            <header>
+                <div class="container">
+                    <div class="logo">
+                        <img src="images/plainlogo1.png" alt="Logo">
+                        <h3>BOB the BLDR</h3>
+                    </div>
+
+                    <div class="links">
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">COMPONENTS</a></li>
+                            <li><a href="#" class="btn">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="showcase-area">
+
+                <form action="">
+                    <div class="pc-parts">
+                        
+                        <div>
+                            <h3>Processor</h3>
+                            <select id="processor" class="dropdown-parts" onchange="calculateTotal()">
+                                <option value="no-processor"> None </option>
+                                <option value="i5-11600k">Intel Core i5-11600K (KSh. 25,000)</option>
+                                <option value="i7-11700k">Intel Core i7-11700K (KSh. 35,000)</option>
+                                <option value="ryzen-5-5600x">AMD Ryzen 5 5600X (KSh. 30,000)</option>
+                                <option value="ryzen-7-5800x">AMD Ryzen 7 5800X (KSh. 40,000)</option>
+                            </select>
+                        </div>
+
+                        <br>
+    
+                        <div>
+                            <h3>Motherboard</h3>
+                            <select id="motherboard" class="dropdown-parts" onchange="calculateTotal()">
+                                <option value="no-motherboard"> None </option>
+                                <option value="b360m-motar">MSI MAG B360M-MORTAR (LGA 1151) mATX motherboard (KSh. 14,000)</option>
+                                <option value="cvn-b450m">Colorful CVN B450M Gaming Motherboard AM4 V14 (KSh. 13,800)</option>
+                                <option value="h510m-k">Intel H510M-K M.2 V20 Gaming Motherboard (KSh. 15,000)</option>
+                                <option value="cvn-b550m"> Colorful CVN B550M Gaming Motherboard Frozen V14 (KSh. 19,500)</option>
+                                <option value="asus-tuf">ASUS TUF GAMING B550M-PLUS WI-FI II AM4 Micro-ATX Motherboard (KSh. 20,600)</option>
+                                <option value="intel-z590">Intel® Z590 GAMING Motherboard Supports. LGA 1200 Socket (KSh. 25,500)</option>
+                                <option value="b550-f">ASUS ROG Strix B550-F ATX Gaming Motherboard (KSh. 35,800)</option>
+                                <option value="z690-ud">Gigabyte Z690 UD DDR4 Motherboard (KSh. 37,800)</option>
+                            </select>
+                        </div>
+
+                        <br>
+                        
+                        <div>
+                            <h3>Graphics Card</h3>
+                            <select id="gpu" class="dropdown-parts" onchange="calculateTotal()">
+                                <option value="no-gpu"> None </option>
+                                <option value="rtx-3060">NVIDIA GeForce RTX 3060 (KSh. 40,000)</option>
+                                <option value="rtx-3070">NVIDIA GeForce RTX 3070 (KSh. 50,000)</option>
+                                <option value="rx-6700-xt">AMD Radeon RX 6700 XT (KSh. 45,000)</option>
+                                <option value="rx-6800">AMD Radeon RX 6800 (KSh. 60,000)</option>
+                            </select>
+                        </div>
+
+                        <br>
+    
+                        <div>
+                            <h3>RAM </h3>
+                            <select id="ram" class="dropdown-parts" onchange="calculateTotal()">
+                                <option value="no-ram"> None </option>
+                                <option value="16gb">16GB DDR4 (KSh. 10,000)</option>
+                                <option value="32gb">32GB DDR4 (KSh. 20,000)</option>
+                                <option value="64gb">64GB DDR4 (KSh.40,000)</option>
+                            </select>
+                        </div>
+
+                        <br>
+                        
+                        <div>
+                            <h3>SSD</h3>
+                            <select id="ssd" class="dropdown-parts" onchange="calculateTotal()">
+                                <option value="no-ssd"> None </option>
+                                <option value="m2nvme-256gb">PUSKILL M.2 NVME 2280 256GB (KSh. 4,900)</option>
+                                <option value="m2nvme-512gb">PUSKILL M.2 NVME 2280 512GB (KSh. 6,000)</option>
+                                <option value="sata3-512gb">PUSKILL 2.5" 512GB SATA3 (KSh. 6,100)</option>
+                                <option value="m2nvme-1tb">PUSKILL M.2 NVME 2280 1TB (KSh. 12,500)</option>
+                                <option value="sata3-1tb">PUSKILL 2.5" SATA3 1TB (KSh. 13,500)</option>
+                            </select>
+                        </div>
+
+                        <br>
+    
+                        <div>
+                            <h3>HDD</h3>
+                            <select id="hdd" class="dropdown-parts" onchange="calculateTotal()">
+                                <option value="no-hdd"> None </option>
+                                <option value="hdd-500gb">512GB (KSh. 1,500)</option>
+                                <option value="hdd-1tb">1TB (KSh. 2,500)</option>
+                                <option value="hdd-2tb">2TB (KSh. 4,500)</option>
+                            </select>
+                        </div>
+
+                        <br>
+    
+                        <div>
+                            <h3>Power Supply</h3>
+                            <select id="psu" class="dropdown-parts" onchange="calculateTotal()">
+                                <option value="no-psu"> None </option>
+                                <option value="aigo-500w"> Aigo AK500 PFC 500W (KSh. 5,000)</option>
+                                <option value="aigo-650w">Aigo GP650 Active Power 80PLUS BRONZE (KSh. 7,500)</option>
+                                <option value="gt-550">GT-550 80 Plus Bronze Certified Full Modular (KSh. 8,500)</option>
+                                <option value="gold-850w">850W 80 Plus Gold Certified Full Modular Power (KSh. 16,900)</option>
+                            </select>
+                        </div>
+
+                        <br>
+                        
+                        <div>
+                            <h3>Heatsink</h3>
+                            <select id="heatsink" class="dropdown-parts" onchange="calculateTotal()">
+                                <option value="no-heatsink"> None </option>
+                                <option value="shadow-4pin">Shadow Pro Top Flow 4 PIN PWM CPU RGB Coolee (KSh. 3,500)</option>
+                                <option value="darkflash-s11">Darkflash Ellsworth S11 PRO Tower (KSh. 4,200)</option>
+                                <option value="segotep-us">Segotep CAMBRIAN U6 (KSh. 6,000)</option>
+                                <option value="twister-dx120">Twister DX120 Liquid CPU Cooler ARGB (KSh. 6,000)</option>
+                                <option value="syphony-tr240">Symphony TR240  Liquid CPU Cooler (KSh. 10,500)</option>
+                                <option value="segotep-beiced"> Segotep BEICED RGB 240 AIO  (KSh. 10,500)</option>
+                                <option value="darkflash-dxv2">DarkFlash Twister ARGB DXV2 240 AIO (KSh. 11,000)</option>
+                            </select>
+                        </div>
+
+                        <br>
+                        
+                        <div>
+                            <h3>PC Case</h3>
+                            <select id="caseOption" class="dropdown-parts" onchange="calculateTotal()">
+                                <option value="no-caseOption"> None </option>
+                                <option value="nzxt-h510">NZXT H510 (KSh. 7,000)</option>
+                                <option value="corsair-4000d">Corsair 4000D (KSh. 8,000)</option>
+                                <option value="fractal-meshify-c">Fractal Meshify C (KSh. 9,000)</option>
+                            </select>
+                        </div>
+                        
+                        <br>
+
+                        <div>
+                            <a href="#" class="btn" >Request this build</a>
+                        </div>
+                </form>
+            
+            
+            </div>
+
+            <div class="bottom-area">
+                
+                <div class="container">
+                    <button class="toggle-btn">
+                        <i class="far fa-moon"></i>
+                        <i class="far fa-sun"></i>
+                    </button>
+                </div>
+
+                <div class="total-pc-cost">
+                    <h2 id="total"></h2>
+                </div>
+
+
+            </div>
+        
+        </div>
+    </main>
+    
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="build.js"></script>
+    
+</body>
+</html>
