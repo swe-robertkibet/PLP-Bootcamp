@@ -144,6 +144,7 @@ header .container{
     height: 3px;
     background-color: #fff;  
     border-radius: 3px; 
+    transition: 0.5s;
 }
 
 .bar::before, .bar::after {
@@ -153,6 +154,7 @@ header .container{
     height: 100%;
     background-color: #fff;
     border-radius: 3px;
+    transition: 0.5s;
 }
 
 .bar::before {
@@ -161,6 +163,19 @@ header .container{
 
 .bar::after {
     transform: translateY(8px);
+}
+
+.big-wrapper.active .hamburger-menu .bar {
+    background-color: transparent;
+
+}
+
+.big-wrapper.active .bar::before {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.big-wrapper.active .bar::after {
+    transform: translateY(0) rotate(45deg);
 }
 
 .showcase-area .container{
