@@ -294,15 +294,6 @@ header .container{
 }
 
 @media screen and (max-width: 870px) {
-    .showcase-area .container {
-        grid-template-columns: 1fr;
-    }
-
-    .computer {
-        width: 100%;
-        transform: none;
-    }
-
     .hamburger-menu{
         display: flex;
     }
@@ -364,5 +355,50 @@ header .container{
         opacity: 1;
 
     }
+
+
+    .showcase-area .container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        grid-gap: 2rem;
+    }
+
+    .showcase-area{
+        padding: 2.5rem 0;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .big-title{
+        font-size: 1.1rem;
+    }
+
+    .text {
+        font-size: .95rem;
+        margin: 1.4rem 0 1.5rem;
+
+    }
+
+    .logo h3 {
+        font-size: 1.25rem;
+
+    }
+
+    .shape {
+        bottom: 80px;
+        left: -150px;
+    }
+
+
+    .shape-six {
+        bottom: 480px;
+        left: -150px;
+    }
+
+    .computer {
+        width: 100%;
+        transform: none;
+    }
+
 }
 
