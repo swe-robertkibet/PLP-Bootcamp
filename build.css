@@ -185,12 +185,15 @@ select::after {
     background: #000;
     cursor: pointer;
     pointer-events: none;
-    transition: 0.25s all ease;
-
-    
+    transition: 0.25s all ease;   
 }
 
 .select:hover::after {
+    color: #000;
+}
+
+::selection {
+    background-color: yellow;
     color: #000;
 }
 
