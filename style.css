@@ -129,9 +129,10 @@ header .container{
 }
 
 .hamburger-menu {
+    position: relative;
+    z-index: 99;
     width: 2rem;
     height: 2rem;
-    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,7 +143,7 @@ header .container{
     position: relative;
     width: 100%;
     height: 3px;
-    background-color: #fff;  
+    background-color: var(--darkTwo);  
     border-radius: 3px; 
     transition: 0.5s;
 }
@@ -152,7 +153,7 @@ header .container{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: var(--darkTwo);
     border-radius: 3px;
     transition: 0.5s;
 }
