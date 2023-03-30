@@ -351,11 +351,18 @@ header .container{
         background-color: rgba(0, 0, 0, 0.7);
         opacity: 0;
         pointer-events: none;
+        transition: 0.5s;
     }
 
     .big-wrapper.active .links {
         transform: translateY(0);
         box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    .big-wrapper.active .overlay {
+        pointer-events: all;
+        opacity: 1;
+
     }
 }
 
