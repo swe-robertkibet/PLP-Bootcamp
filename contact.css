@@ -30,6 +30,8 @@ a {
     text-decoration: none;/*Remove underline on the links*/
 }
 
+
+
 /*Parent to bottom navbar and showcase*/
 .big-wrapper {
     padding: 1.7rem 0 2rem;
@@ -177,23 +179,27 @@ header .container {
 
 
 
+
 /*----------END OF NAVBAR-----------*/
 
 .showcase-area .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    justify-content: center;
+    justify-content: right;
 }
 
+
+
 .big-tittle {
-    font-size: 1.4rem;
-    color: var(--darkOne);
+    font-size: 1.1rem;
+    color: var(--lightTwo);
     text-transform: capitalize;
     line-height: 1.4;
 }
 
-.text {
+
+p {
     color: var(--lightOne);
     font-size: 1.1rem;
     margin: 1.9rem 0 2.5rem;
@@ -201,49 +207,83 @@ header .container {
     line-height: 2.3;
 }
 
+
+
+.container h1, h2 {
+    color: var(--lightOne);
+    font-size: 24px;
+    margin-bottom: auto;
+    max-width: 600px;
+    line-height: 2.3;
+    margin-right: auto;
+}
+
+
+
+
+
 .showcase-area .btn {
     box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.05);
 }
 
-/*----Cards and Slides----*/
 
-.cards {
-    display: flex;
-    width: 90vw;
-}
-
-.panel {
-    background-size: cover;/*To preserve rounded corners on large screens*/
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 80vh;
-    border-radius: 50px;
-    color: #fff;
-    cursor: pointer;
-    flex: 0.5;
-    margin: 10px;
-    position:relative;
-    transition: flex 0.7s ease-in;
-}
- 
-.panel h3 {
-    font-size: 25px;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    margin: 0;
-    opacity: 0;
-}
-
-.panel.active {
-    flex: 5;
-}
-
-.panel.active h3 {
-    opacity: 1;
-    transition: opacity 0.3s ease-in 0.4s;
+/*Contact area start*/
+form {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 500px;
     
 }
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 2px;
+    text-align: left;
+    width: 100%;
+}
+
+
+input[type="text"], input[type="email"], textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: var(--mainColor);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--hoverColor);
+}
+
+a {
+    color:var(--mainColor);
+    text-decoration: none;
+}
+
+a:hover {
+    transform: scale(1.05);
+}
+/*Contact area end*/
+
+
+
+
+
 
 @media screen and (max-width: 870px) {
     
@@ -316,32 +356,58 @@ header .container {
         margin: 0 auto;
     }
 
-    .big-tittle {
-        font-size: 1rem;
-    }
+    
 
     .text {
         font-size: 0.9rem;
         transform: none;
     }
 
-    .person {
-        width: 75%;
-        transform: none;
-    }
+
 
     .logo h3 {
         font-size: 1.25rem;
     }
 
-    .container{
-        width: 100vw;
+    .dropdown-parts {
+        position: relative;
+        width: 20em;
+        height: 2em;
+        line-height: 1;
+        background: var(--mainColor);
+        overflow: hidden;
+        border-radius: 0.25em; 
+    }
+    label {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin-bottom: 2px;
+        text-align: left;
+        width: 100%;
     }
 
-    .panel:nth-of-type(4),
-    .panel:nth-of-type(5),
-    .panel:nth-of-type(6) {
-        display: none;
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 14px;
+        padding: 8px;
     }
+
+    p {
+        color: var(--lightOne);
+        font-size: 0.9rem;;
+        max-width: 600px;
+        line-height: 2;
+    }
+    .container  h1, h2 {
+        color: var(--lightOne);
+        font-size: 24px;
+        margin-bottom: 1px;
+        max-width: 600px;
+        line-height: 1;
+        margin-top: auto;
+        padding: 0;
+    }
+
 }
-
