@@ -245,6 +245,10 @@ header .container {
     color: var(--mainColor);
 }
 
+.showcase-area a {
+    color: var(--mainColor);
+}
+
 
  
 .showcase-area p {
